@@ -1,72 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Memory game</title>
-</head>
-<body>
-
-  <!-- Game setup start -->
-
-  Select Theme
-  Numbers
-  Icons
-
-  Number of Players
-  1
-  2
-  3
-  4
-
-  Grid Size
-  4x4
-  6x6
-
-  Start Game
-
-  <!-- Game setup end -->
-
-  <!-- Game board start -->
-
-  Restart
-  New Game
-
-  <!-- Multiplayer scores start -->
-
-  Player 1
-  <!-- P1 score -->
-  Current Turn
-
-  Player 2
-  <!-- P2 score -->
-  Current Turn
-
-  Player 3
-  <!-- P3 score -->
-  Current Turn
-
-  Player 4
-  <!-- P4 score -->
-  Current Turn
-
-  <!-- Multiplayer scores start -->
-
-  <!-- Solo game time and moves counter start -->
-
-  Time
-  <!-- Time elapsed -->
-
-  Moves
-  <!-- Moves total -->
-
-  <!-- Solo game time and moves counter end -->
-
-  <!-- Game board end -->
-
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" >
+    <title>Frontend Mentor | Memory game</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Game setup start-->
+      <div class="start-screen">
+        <div class="logo-box">
+          <img class="logo" src="assets/logo-cpy.svg" >
+        </div>
+        <div class="start-menu">
+          <div class="menu-container">
+            <div class="option-group">
+              <p>Select Theme</p>
+              <div id="themeBtn" class="g2">
+                <button id="optNumbers" class="btn btn-theme btn-rad-1 btn-active">Numbers</button>
+                <button id="optIcons" class="btn btn-theme btn-rad-1 btn-idle">Icons</button>
+              </div>
+            </div>
+            <div class="option-group">
+              <p>Number of Players</p>
+              <div id="gPlayBtn" class="g4">
+                <button id="gPlay1" class="btn btn-players btn-rad-1 btn-active">1</button>
+                <button id="gPlay2" class="btn btn-players btn-rad-1 btn-idle">2</button>
+                <button id="gPlay3" class="btn btn-players btn-rad-1 btn-idle">3</button>
+                <button id="gPlay4" class="btn btn-players btn-rad-1 btn-idle">4</button>
+              </div>
+            </div>
+            <div class="option-group">
+              <p>Grid Size</p>
+              <div id="gridBtn" class="g2">
+                <button id="gBoard4" class="btn btn-grid btn-rad-1 btn-active">4x4</button>
+                <button id="gBoard6" class="btn btn-grid btn-rad-1 btn-idle">6x6</button>
+              </div>
+            </div>
+            <button id="startBtn" class="btn btn-start btn-rad-1 btn-primary-idle">Start Game</button>
+          </div>
+        </div> 
+    </div>
+      <!-- Game setup end-->
+    </div>
+  </body>
 </html>
