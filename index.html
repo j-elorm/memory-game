@@ -130,7 +130,58 @@
           </div>
         </div>
       </div>
-      <!-- game board end-->
+      <!-- Game board end-->
+
+      <!-- Game modals-->
+      <div id="menuModal" class="modal __hide">
+        <div class="modal-content modal-menu">
+          <div class="modal-content-menu">
+            <button id="restartGameMobi" class="btn-modal btn-primary-idle btn-modal-1 btn-modal-restart btn-rad-1">Restart</button>
+            <button id="newGameMobi" class="btn-modal btn-secondary-idle btn-modal-1 btn-rad-1">New Game</button>
+            <button id="resumeGameMobi" class="btn-modal btn-secondary-idle btn-modal-1 btn-rad-1">Resume</button>
+          </div>
+        </div>
+      </div>
+      <div id="multiScoreModal" class="modal __hide">
+        <div class="modal-content modal-multi">
+          <div class="modal-content-box">
+            <div class="game-overview">
+              <h2 class="game-overview-title"></h2>
+              <p class="game-overview-text">Game over! Here are the results...</p>
+            </div>
+            <div class="game-overview-results">
+            </div>
+            <div class="game-overview-setting">
+              <button id="restartMultiScoreModal" class="btn-modal btn-modal-restart btn-primary-idle btn-rad-1 btn-modal-2">Restart</button>
+              <button id="newGameMultiScoreModal" class="btn-modal btn-secondary-idle btn-rad-1 btn-modal-2">Setup New Game</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="soloScoreModal" class="modal __hide">
+        <div class="modal-content modal-solo">
+          <div class="modal-content-box">
+            <div class="game-overview">
+              <h2 class="game-overview-title">You did it!</h2>
+              <p class="game-overview-text">Game over! Here's how you got on...</p>
+            </div>
+            <div class="game-overview-results">
+              <div class="game-overview-result">
+                <p class="game-result-label">Time Elapsed</p>
+                <p class="game-result-value"><span class="soloModalTime">0:00</span></p>
+              </div>
+              <div class="game-overview-result">
+                <p class="game-result-label">Moves Taken</p>
+                <p class="game-result-value"><span class="soloModalMoves">0</span> Moves</p>
+              </div>
+            </div>
+            <div class="game-overview-setting">
+              <button id="restartSoloScoreModal" class="btn-modal btn-modal-restart btn-primary-idle btn-rad-1 btn-modal-2">Restart</button>
+              <button id="newGameSoloScoreModal" class="btn-modal btn-secondary-idle btn-rad-1 btn-modal-2">Setup New Game</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
