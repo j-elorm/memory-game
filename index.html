@@ -45,8 +45,92 @@
             <button id="startBtn" class="btn btn-start btn-rad-1 btn-primary-idle">Start Game</button>
           </div>
         </div> 
-    </div>
+      </div>
       <!-- Game setup end-->
+
+      <!-- Game board start-->
+      <div class="game-screen hide-screen">
+        <div class="board-container">
+          <div class="game-header">
+            <div>
+              <img class="" src="assets/logo.svg">
+            </div>
+            <button id="menuBtnMobi" class="btn btn-primary-idle btn-rad-1 btn-menu">Menu</button>
+            <div class="game-header__menu">
+              <button id="restartGame" class="btn btn-header-menu btn-rad-1 btn-primary-idle btn-restart">Restart</button>
+              <button id="newGame" class="btn btn-header-menu btn-rad-1 btn-secondary-idle btn-new-game">New Game</button>
+            </div>
+          </div>
+          <div class="board-holder">
+            <div class="game-board board-6">
+            </div>
+            <div class="game-board board-4 __hide">
+            </div>
+          </div>
+          <div class="board-end">
+            <!-- Multiplayer scores start -->
+            <div class="player-turn __hide">
+              <div class="turn-box">
+                <div class="turn turn-1 turn-active">
+                  <div class="turn-info-box">
+                    <p class="turn-title title-small">P1</p>
+                    <p class="turn-title title-large">Player 1</p>
+                    <p id="score-p1" class="turn-score">0</p>
+                  </div>
+                </div>
+                <p class="cur-turn">Current Turn</p>
+              </div>
+              <div class="turn-box">
+                <div class="turn turn-2">
+                  <div class="turn-info-box">
+                    <p class="turn-title title-small">P2</p>
+                    <p class="turn-title title-large">Player 2</p>
+                    <p id="score-p2" class="turn-score">0</p>
+                  </div>
+                </div>
+                <p class="cur-turn hidden">Current Turn</p>
+              </div>
+              <div class="turn-box">
+                <div class="turn turn-3">
+                  <div class="turn-info-box">
+                    <p class="turn-title title-small">P3</p>
+                    <p class="turn-title title-large">Player 3</p>
+                    <p id="score-p3" class="turn-score">0</p>
+                  </div>
+                </div>
+                <p class="cur-turn hidden">Current Turn</p>
+              </div>
+              <div class="turn-box">
+                <div class="turn turn-4">
+                  <div class="turn-info-box">
+                    <p class="turn-title title-small">P4</p>
+                    <p class="turn-title title-large">Player 4</p>
+                    <p id="score-p4" class="turn-score">0</p>
+                  </div>
+                </div>
+                <p class="cur-turn hidden">Current Turn</p>
+              </div>
+            </div> 
+            <!-- Multiplayer scores end -->
+  
+            <!-- Solo game time and moves counter start -->
+            <div class="board-end-solo">
+              <div class="solo-player">
+                <div class="solo-time">
+                  <p class="solo-label">Time</p>
+                  <p id="soloTimer" class="solo-value">0:00</p>
+                </div>
+                <div class="solo-moves">
+                  <p class="solo-label">Moves</p>
+                  <p id="soloScore" class="solo-value">0</p>
+                </div>
+              </div>
+            </div>
+            <!-- Solo game time and moves counter end -->
+          </div>
+        </div>
+      </div>
+      <!-- game board end-->
     </div>
   </body>
 </html>
