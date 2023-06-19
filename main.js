@@ -424,8 +424,6 @@ function revealCardValue(card) {
             setTimeout(() => {
                 hideCardValue()
             }, 600);
-
-            console.log(inGamePlayers);
         }
     }
 }
