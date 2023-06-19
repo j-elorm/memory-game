@@ -523,3 +523,112 @@ function endGame() {
         multiModal.classList.remove('__hide');
     }
 }
+
+// Event activites
+
+startButton.addEventListener('click', () => {
+    gameStartInit();
+});
+
+newGameButton.addEventListener('click', () => {
+    gameScreen.classList.add('hide-screen');
+    startScreen.classList.remove('hide-screen');
+    resetBoard();
+});
+
+restartGameButton.addEventListener('click', () => {
+    gameState.isRestart = true;
+    resetBoard();
+    gameStartInit();
+});
+
+newGameButtonMobi.addEventListener('click', () => {
+    gameScreen.classList.add('hide-screen');
+    startScreen.classList.remove('hide-screen');
+    menuModalMobi.classList.add('__hide');
+    resetBoard();
+});
+
+restartGameButtonMobi.addEventListener('click', () => {
+    gameState.isRestart = true;
+    menuModalMobi.classList.add('__hide');
+    resetBoard();
+    gameStartInit();
+});
+
+resumeGameButtonMobi.addEventListener('click', () => {
+    menuModalMobi.classList.add('__hide');
+    startTimer();
+});
+
+menuModalButtonMobi.addEventListener('click', () => {
+    document.getElementById('menuModal').classList.remove('__hide');
+    clearInterval(intervalRef);
+});
+
+newGameSoloModal.addEventListener('click', () => {
+    gameScreen.classList.add('hide-screen');
+    startScreen.classList.remove('hide-screen');
+    soloModal.classList.add('__hide');
+    resetBoard();
+});
+
+restartSoloModal.addEventListener('click', () => {
+    gameState.isRestart = true;
+    soloModal.classList.add('__hide');
+    resetBoard();
+    gameStartInit();
+});
+
+newGameMultiModal.addEventListener('click', () => {
+    gameScreen.classList.add('hide-screen');
+    startScreen.classList.remove('hide-screen');
+    multiModal.classList.add('__hide');
+    resetBoard();
+});
+
+restartMultiModal.addEventListener('click', () => {
+    gameState.isRestart = true;
+    multiModal.classList.add('__hide');
+    resetBoard();
+    gameStartInit();
+});
+
+function attachEventListeners() {
+    gridContain.addEventListener('click', clickCardEvent)
+}
+
+function clickCardEvent(event) {
+    const eventTarget = event.target;
+    const eventChild = eventTarget.children[0];
+    const gSize = parseInt(curGameSettings.selectedGrid.slice(-1));
+
+    if (eventTarget.classList.contains('card') && !eventChild.classList.contains('card-clicked')) {
+        revealCardValue(eventTarget)
+    } 
+
+    if (gameState.gameActive === false && curGameSettings.multiMode === false) {
+        startTimer();
+    }
+
+    if (gSize === 4 && matchedCards === 8) {
+        clearInterval(intervalRef);
+        endGame();
+    } else if (matchedCards === 18) {
+        clearInterval (intervalRef);
+        endGame();
+    }
+}
+
+function attachSettingEventListener(domEl, obj) {
+    domEl.addEventListener('click', () => setClickedButton(domEl, obj));
+}
+
+attachSettingEventListener(themeSelection.iconButton, themeSelection);
+attachSettingEventListener(themeSelection.numButton, themeSelection);
+attachSettingEventListener(playerSelection.playerButton1, playerSelection);
+attachSettingEventListener(playerSelection.playerButton2, playerSelection);
+attachSettingEventListener(playerSelection.playerButton3, playerSelection);
+attachSettingEventListener(playerSelection.playerButton4, playerSelection);
+attachSettingEventListener(gridSelection.gridButton4, gridSelection);
+attachSettingEventListener(gridSelection.gridButton6, gridSelection);
