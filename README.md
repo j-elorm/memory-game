@@ -1,4 +1,4 @@
-# AmaliTech Training Phase 1 Portfolio - Meet landing page
+# AmaliTech Training Phase 2 Portfolio - Memory game
 Portfolio project solution to the Memory game project by AmaliTech Training.
 
 ## Table of contents
