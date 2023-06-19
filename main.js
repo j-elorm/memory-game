@@ -466,6 +466,7 @@ function determineWinner() {
     playersArr.sort((a, b) => b.matches - a.matches);
 
     let hasTie = false;
+    let tieValues = [];
     let countScore = {};
     let gameOverviewTitle = document.querySelector('.game-overview-title');
     let gameOverviewResults = document.querySelector('.game-overview-results');
@@ -477,9 +478,10 @@ function determineWinner() {
 
         if (countScore[num.matches] > 1) {
             hasTie = true;
+            tieValues.push(num.matches);
         }
     }
-    let strTitle = hasTie ? `It's a tie!` : `Player ${playersArr[0].id} Wins!`;
+    let strTitle = (hasTie && (tieValues[0] === playersArr[0].matches)) ? `It's a tie!` : `Player ${playersArr[0].id} Wins!`;
 
     gameOverviewTitle.textContent = strTitle;
 
@@ -496,15 +498,11 @@ function determineWinner() {
 
     gameOverviewResults.innerHTML = multiModalContent;
 
-    if (hasTie === false) {
-        document.querySelector('.game-overview-result').classList.add('game-overview-winner');
-        document.querySelector('.game-overview-result').textContent + ' (Winner!)';
-    }
-
     for (let i = 0; i < 4; i++) {
+        let winEl = document.querySelectorAll('.game-overview-result')[i].children[0];
         if (playersArr[i].matches === playersArr[0].matches) {
             document.querySelectorAll('.game-overview-result')[i].classList.add('game-overview-winner');
-            document.querySelectorAll('.game-overview-result')[i].textContent + ' (Winner!)';
+            winEl.textContent = winEl.textContent + ' (Winner!)';
         }
     }
 }
