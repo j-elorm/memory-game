@@ -274,14 +274,8 @@ function resetValues() {
     moves = 0;
     matchedCards = 0;
     gameState.gameActive = false;
-    let isMultiMode = curGameSettings.multiMode;
 
     if (gameState.isRestart === false) {
-
-        curGameSettings.multiMode = false;
-        curGameSettings.numOfPlayers = 'gPlay1';
-        curGameSettings.selectedGrid = 'gBoard4';
-        curGameSettings.selectedTheme = 'optNumbers';
 
         let gameTheme = document.getElementById('themeBtn');
         let gamePlayers = document.getElementById('gPlayBtn');
@@ -290,9 +284,15 @@ function resetValues() {
         resetStartScreen(gameTheme);
         resetStartScreen(gamePlayers);
         resetStartScreen(gameGrid);
+
+        curGameSettings.numOfPlayers = 'gPlay1';
+        curGameSettings.selectedGrid = 'gBoard4';
+        curGameSettings.selectedTheme = 'optNumbers';
+
+
     }
 
-    if (isMultiMode) {
+    if (curGameSettings.multiMode) {
         let pTurn = document.querySelectorAll('.turn');
         let cTurn = document.querySelectorAll('.cur-turn');
     
@@ -325,6 +325,8 @@ function resetValues() {
         cTurn[0].classList.remove('hidden');
 
         gameState.isRestart = false;
+
+        curGameSettings.multiMode = false;
     }
     clearInterval(intervalRef);
 
