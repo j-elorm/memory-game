@@ -527,9 +527,9 @@ startButton.addEventListener('click', () => {
 });
 
 newGameButton.addEventListener('click', () => {
+    resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
-    resetBoard();
 });
 
 restartGameButton.addEventListener('click', () => {
@@ -539,55 +539,55 @@ restartGameButton.addEventListener('click', () => {
 });
 
 newGameButtonMobi.addEventListener('click', () => {
+    resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
     menuModalMobi.classList.add('__hide');
-    resetBoard();
 });
 
 restartGameButtonMobi.addEventListener('click', () => {
     gameState.isRestart = true;
-    menuModalMobi.classList.add('__hide');
     resetBoard();
     gameStartInit();
+    menuModalMobi.classList.add('__hide');
 });
 
 resumeGameButtonMobi.addEventListener('click', () => {
-    menuModalMobi.classList.add('__hide');
     startTimer();
+    menuModalMobi.classList.add('__hide');
 });
 
 menuModalButtonMobi.addEventListener('click', () => {
-    document.getElementById('menuModal').classList.remove('__hide');
     clearInterval(intervalRef);
+    document.getElementById('menuModal').classList.remove('__hide');
 });
 
 newGameSoloModal.addEventListener('click', () => {
+    resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
     soloModal.classList.add('__hide');
-    resetBoard();
 });
 
 restartSoloModal.addEventListener('click', () => {
     gameState.isRestart = true;
-    soloModal.classList.add('__hide');
     resetBoard();
     gameStartInit();
+    soloModal.classList.add('__hide');
 });
 
 newGameMultiModal.addEventListener('click', () => {
+    resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
     multiModal.classList.add('__hide');
-    resetBoard();
 });
 
 restartMultiModal.addEventListener('click', () => {
     gameState.isRestart = true;
-    multiModal.classList.add('__hide');
     resetBoard();
     gameStartInit();
+    multiModal.classList.add('__hide');
 });
 
 function attachEventListeners() {
