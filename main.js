@@ -274,6 +274,7 @@ function resetValues() {
     moves = 0;
     matchedCards = 0;
     gameState.gameActive = false;
+    let isMultiMode = curGameSettings.multiMode;
 
     if (gameState.isRestart === false) {
 
@@ -285,6 +286,7 @@ function resetValues() {
         resetStartScreen(gamePlayers);
         resetStartScreen(gameGrid);
 
+        curGameSettings.multiMode = false;
         curGameSettings.numOfPlayers = 'gPlay1';
         curGameSettings.selectedGrid = 'gBoard4';
         curGameSettings.selectedTheme = 'optNumbers';
@@ -292,7 +294,7 @@ function resetValues() {
 
     }
 
-    if (curGameSettings.multiMode) {
+    if (isMultiMode) {
         let pTurn = document.querySelectorAll('.turn');
         let cTurn = document.querySelectorAll('.cur-turn');
     
@@ -325,8 +327,6 @@ function resetValues() {
         cTurn[0].classList.remove('hidden');
 
         gameState.isRestart = false;
-
-        curGameSettings.multiMode = false;
     }
     clearInterval(intervalRef);
 
@@ -529,6 +529,7 @@ startButton.addEventListener('click', () => {
 });
 
 newGameButton.addEventListener('click', () => {
+    gameState.isRestart = false;
     resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
@@ -541,6 +542,7 @@ restartGameButton.addEventListener('click', () => {
 });
 
 newGameButtonMobi.addEventListener('click', () => {
+    gameState.isRestart = false;
     resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
@@ -565,6 +567,7 @@ menuModalButtonMobi.addEventListener('click', () => {
 });
 
 newGameSoloModal.addEventListener('click', () => {
+    gameState.isRestart = false;
     resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
@@ -579,6 +582,7 @@ restartSoloModal.addEventListener('click', () => {
 });
 
 newGameMultiModal.addEventListener('click', () => {
+    gameState.isRestart = false;
     resetBoard();
     gameScreen.classList.add('hide-screen');
     startScreen.classList.remove('hide-screen');
