@@ -215,7 +215,7 @@ button {
 }
 
 .btn-modal-2 {
-    width: 26.4rem;
+    width: 27.9rem;
 }
 
 .logo-box {
@@ -336,6 +336,10 @@ button {
     .btn-modal {
         font-size: 2rem;
         line-height: 2.5rem;
+    }
+
+    .btn-modal-2 {
+        width: 26.4rem;
     }
 
     .logo-box {
