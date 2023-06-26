@@ -198,7 +198,7 @@ function generateRandomContent(size, theme) {
 function initGame(gridSize, curTheme) {
     generateCards(gridSize);
     generateRandomContent(gridSize, curTheme);
-    attachEventListeners(gridSize);
+    attachEventListeners();
 }
 
 function gameStartInit() {
