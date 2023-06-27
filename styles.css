@@ -864,6 +864,43 @@ button {
         padding: 4.7rem 10.5rem 3.5rem;
     }
 
+    .board-container {
+        gap: 5rem;
+    }
+
+    .card-6 {
+        width: 4.28rem;
+        height: 4.28rem;
+        border-radius: 4rem;
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+    
+    .card-4 {
+        width: 7.05rem;
+        height: 7.05rem;
+        border-radius: 5.75rem;
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .solo-time, .solo-moves {
+        width: 22.5rem;
+        height: 7rem;
+        border-radius: 0.8rem;
+        padding: 0 2rem 0 2.2rem;
+    }
+
+    .solo-label {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    
+    .solo-value {
+        font-size: 3rem;
+        line-height: 3.6rem;
+    }
+
     .modal-content {
         max-width: 65.4rem;
         border-radius: 2rem;
